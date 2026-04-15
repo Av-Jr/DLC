@@ -24,13 +24,13 @@ overflow-x : hidden;
 #NavLayout, .secondP{
     display : flex;
     flex-direction : row;
-    justify-content : space-evenly;
-    width: clamp(250px, 90vw, 4000px);
-    height : 100px;
-    background : white;
+    justify-content : space-around;
+    width: clamp(100px, 90vw, 4000px);
+    height : clamp(10px, 10vh, 300px);
     margin :20px auto;
     align-items : center;
-    font-size : clamp(20px, 2vw, 25px);
+    font-size : clamp(14px, 2vh, 100px);
+    background : white;
 }
 
 .logo{
@@ -52,7 +52,7 @@ overflow-x : hidden;
     background : rgb(220, 38, 38);
     color : white;
     border-radius : 30px;
-    height : clamp(45px, 6vh, 90px);
+    height : clamp(0px, 5vh, 150px);
     aspect-ratio : 6/3;
     font-size : 100%;
     font-family: "Rubik", sans-serif;
@@ -112,39 +112,31 @@ overflow-x : hidden;
 
 
 
-@media (max-width : 768px){
-    .Pg{
-        width : 100%;
-        height : 100vh;
-    }
-    .ham{
-        display : block;
+@media (max-width : 425px){
+    .links, .AuthBtns{
+        flex-direction : column;
+        color : white;
+        font-weight : 20;
     }
     .secondP{
         position : fixed;
-        top : 20vh;
         background : black;
+        top : 20vh;
         height : auto;
-        width : 100%;
-        margin : auto;
         left : -100%;
+        width : 100%;
         transition : all 0.5s ease;
+    }
+
+    .ham{
+        display : block;
+        margin : 20px;
     }
 
     .secondP.active{
         left : 0;
     }
 
-    .links, .AuthBtns{
-        flex-direction : column;
-        margin : 10px;
-        flex-grow : 1;
-        color : white
-    }
 
-    #NavLayout{
-        height : 50vh;
-        background : red;
-    }
 
 }
