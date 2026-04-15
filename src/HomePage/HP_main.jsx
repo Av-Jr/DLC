@@ -1,5 +1,4 @@
 import "./HP_main.css"
-import "./HP_main.js"
 import NavBar from "./NavBar.jsx"
 
 const HP_main = () => {

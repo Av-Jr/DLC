@@ -1,12 +1,17 @@
+import {useState} from 'react'
+
 const NavBar = () => {
   const items = ["We", "Services", "Insights", "Connect"];
   const button_items = ["Login", "Sign Up"];
+  const [hamActive, setHamActive] = useState(false);
+
+  const changeHam = () => setHamActive(!hamActive)
 
   return (
     <>
       <div id="NavLayout">
           <img className="logo" src="/logo.webp"/>
-          <div className = "secondP">
+          <div className = {`secondP ${hamActive ? 'active' : ' '}`}>
               <ul className="links">
                   {items.map((x) => (
                       <li key={x} className="linksC">{x}
@@ -22,7 +27,7 @@ const NavBar = () => {
               </div>
           </div>
 
-          <div className = "ham">
+          <div className = {`ham ${hamActive ? 'active' : " "}`} onClick = {changeHam} >
               <span className = "hmb"></span>
               <span className = "hmb"></span>
               <span className = "hmb"></span>
