@@ -1,6 +1,6 @@
-body{
+html, body{
 font-family: "Rubik", sans-serif;
-
+overflow-x : hidden;
 }
 
 #Layout{
@@ -10,7 +10,7 @@ font-family: "Rubik", sans-serif;
 
 .Pg{
     height : 100vh;
-    width : 100vw;
+    width : 100%;
 }
 
 .first{
@@ -113,8 +113,8 @@ font-family: "Rubik", sans-serif;
 
 
 @media (max-width : 768px){
-    .pg{
-        width : 100vw;
+    .Pg{
+        width : 100%;
         height : 100vh;
     }
     .ham{
@@ -142,8 +142,7 @@ font-family: "Rubik", sans-serif;
         color : white
     }
 
-    .NavLayout{
-        width : 100vw;
+    #NavLayout{
         height : 50vh;
         background : red;
     }
