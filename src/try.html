@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "./try.css">
+    </head>
+
+    <body>
+        <div class="container">
+
+              <div class="box">
+                This is the first div element containing a long sentence intended to occupy enough horizontal space so that when the container width becomes smaller the flex items will not be able to stay on the same row and flex wrap behaviour can be observed clearly.
+              </div>
+
+              <div class="box">
+                This is the second div element with another long sentence written only for testing layout behaviour so that you can resize the browser window and observe how the flex container rearranges the items depending on the available space.
+              </div>
+
+              <div class="box">
+                This is the third div element containing extended text so that the element becomes wider and demonstrates how flex items interact with each other when the container cannot fit them in a single line anymore.
+              </div>
+
+              <div class="box">
+                This is the fourth div element with similarly long content designed purely for experimentation with flexbox wrapping so that shrinking the viewport forces the elements to move to the next line.
+              </div>
+
+        </div>
+    </body>
+</html>
+
+.hamEles{
+    display : none;
+    flex-direction : column;
+    height : auto;
+    position : fixed;
+    background : rgba(255, 255, 255, 0.4);
+    backdrop-filter : blur(100px);
+    gap : 1em;
+    width : 100%;
+    justify-content : space-around;
+    align-items : center;
+    cursor : pointer;
+}
+
+.linksCham:hover{
+    color : rgb(220, 38, 38);
+}
+
+.linksCham:hover .arrow{
+    color : rgb(220, 38, 38);
+    transform : rotate(0deg) translateY(2px);
+}
+
+.hamEles, .hamList, .AuthBtnsHam{
+    font-size : inherit;
+    list-style : none;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    align-items : center;
+    gap : 1em;
+}
+
+
+      </div>
+
+      <div className={"hamEles"}>
+          <ul className = "hamList">
+          {items.map((x) => (
+              <li key={x} className="linksCham">{x}
+                <span className ='arrow'>^</span>
+              </li>
+          ))}
+          </ul>
+          <div className = "AuthBtnsHam">
+              {button_items.map((x) => (
+                  <button className = "AuthBtnsEleham">{x}</button>
+              ))}
+          </div>
+      </div>
