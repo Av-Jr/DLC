@@ -137,4 +137,8 @@ font-family: "Rubik", sans-serif;
         color : white
     }
 
+    .NavLayout{
+        width : 100%;
+    }
+
 }
