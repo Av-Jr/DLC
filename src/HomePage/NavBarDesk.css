@@ -1,0 +1,99 @@
+html{
+    font-size : 16px;
+}
+
+.Nav, .con2, .links, .eleCon{
+    display : flex;
+    flex-direction : row;
+    justify-content : space-around;
+    align-items : center;
+    gap : 2em;
+}
+.Nav{
+    height : 50px;
+    background : transparent;
+    backdrop-filter : blur(10px);
+    width : 50%;
+    margin : 20px auto;
+}
+
+.links{
+    list-style: none;
+
+}
+
+.NavLogo{
+    height : 100%;
+    width : auto;
+}
+
+.links, .eleCon{
+    font-size: 1em;
+}
+
+.linkEle, .AuthBtn{
+    transition : 0.3s ease;
+    cursor : pointer;
+}
+
+.AuthBtn{
+    display : inline-flex;
+    align-items : center;
+    justify-content : center;
+    padding : 0.6em 1.2em;
+    font-size : 0.8em;
+    background : rgba(226, 35, 35, 1);
+    color : white;
+    border-radius : 20px;
+}
+
+.linkEle:hover{
+    color : red;
+}
+
+.arrow{
+    display : inline-block;
+    transition : 0.3s ease;
+}
+.linkEle:hover .arrow{
+    transform : rotate(180deg) translateY(-4px);
+}
+
+.AuthBtn:hover{
+    background : grey;
+}
+
+.ham{
+    width : 40px;
+    cursor : pointer;
+    display : none;
+}
+
+.hamL{
+    display : block;
+    height : 4px;
+    background : black;
+    margin : 6px 0;
+    transition : 0.3s ease;
+}
+
+@media(max-width : 1024px){
+    .Nav{
+        width : 80%;
+        height : 10vh;
+        background : transparent;
+    }
+
+    .NavLogo{
+        height : 80%;
+    }
+    .con2{
+        display : none;
+        position : fixed;
+        top : 100px;
+    }
+
+    .ham{
+        display : block;
+    }
+}
