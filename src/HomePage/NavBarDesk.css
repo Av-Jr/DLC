@@ -133,10 +133,7 @@ html{
     }
 
     .ham{
-        display : flex;
-        height : 40px;
-        width : 40px;
-        flex-direction : column;
+        display : block;
         user-select : none;
     }
 
