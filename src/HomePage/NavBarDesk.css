@@ -64,8 +64,6 @@ html{
 }
 
 .ham{
-    width : 40px;
-    cursor : pointer;
     display : none;
 }
 
@@ -135,7 +133,11 @@ html{
     }
 
     .ham{
-        display : block;
+        display : flex;
+        height : 40px;
+        width : 40px;
+        flex-direction : column;
+        user-select : none;
     }
 
     .overlay.active{
