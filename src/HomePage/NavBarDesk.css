@@ -65,6 +65,7 @@ html{
 
 .ham{
     display : none;
+    width : 40px;
 }
 
 .hamL{
@@ -134,7 +135,6 @@ html{
 
     .ham{
         display : block;
-        user-select : none;
     }
 
     .overlay.active{
