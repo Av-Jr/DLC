@@ -3,6 +3,8 @@ import './NavBarDesk.css'
 
 function NavBar_Desktop(){
     const [HamMenu, setHam] = useState(false);
+    const [dropItem, setItem] = useState(null)
+    const navItems = ["We", "Services", "Insights", "Connect"]
 
     const setHamval = () => {setHam(!HamMenu)}
     return (
@@ -20,10 +22,9 @@ function NavBar_Desktop(){
                 <section className={`con2 ${HamMenu ? 'active' : ' '}`}>
                     <div className="eleCon">
                         <ul className="links">
-                            <li className="linkEle">We <span className="arrow">⌄</span></li>
-                            <li className="linkEle">Services <span className="arrow">⌄</span></li>
-                            <li className="linkEle">Insights <span className="arrow">⌄</span></li>
-                            <li className="linkEle">Connect</li>
+                            {navItems.map(item => (
+                                <li className={`linkEle ${dropItem === item ? "up" : ""}`} onClick = {() => setItem(dropItem === item ? null : item)}>{item} <span className={`arrow ${dropItem === item ? "up" : ''}`}>⌄</span></li>
+                            ))}
                         </ul>
                     </div>
                     <div className="eleCon">
